@@ -1,0 +1,42 @@
+<%-include('./common/header')%>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <% if(status==0){ %>
+                <h1>Cart Empty</h1>
+            <% }else{ %>
+
+                <h1> Cart Items </h1>
+                <div class="row">
+                    <% sum = 0;%>
+                    <% allProducts.forEach(function(obj){ 
+                            sum = sum + obj.price
+                        %>
+                        <div class="col-xl-3 text-center ">
+                            <img src="/assets/uploads/<%=obj.imgpath%>" class="img-fluid"/>
+                            <h2><%=obj.price%></h2>
+                            <p>
+                                <%=obj.name%>
+                            </p>
+                            <p>
+                                <button for="<%=obj._id%>" class="btn btn-danger btn-delete">Delet</button>
+                            </p>
+                        </div>
+                    <% }) %>
+                </div>
+
+                <Form method="post" action="/pay-action">
+                    <input type="text" name="firstname"/> <br/>
+                    <input type="text" name="lastname"/> <br/>
+                    <input type="text" name="email"/> <br/>
+                    <input type="text" name="phone"/> <br/>
+                    <input type="text" name="amount" value="<%=sum%>" /> <br/>
+                    <input type="text" name="productinfo"/> <br/>
+                    <button>Send</button>
+                </Form>
+            <% } %>
+        </div>
+       
+    </div>
+</div>
+<%-include('./common/footer')%>

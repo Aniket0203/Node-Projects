@@ -1,0 +1,17 @@
+<h1>Categories</h1>
+            <!-- <%=categoryData%> -->
+            <ul>
+            <% categoryData.forEach(function(obj){ %>
+                <li>
+                    <%= obj.name %>
+                </li>
+            <% }) %>
+            </ul>
+            <h1>Brands</h1>
+            <ul>
+                <% brandData.forEach(function(obj){ %>
+                    <li>
+                        <%= obj.name %>
+                    </li>
+            <% }) %>
+            </ul>

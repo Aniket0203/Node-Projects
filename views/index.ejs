@@ -1,0 +1,27 @@
+<%-include('common/header')%>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3">
+            <%-include('common/sidebar')%>
+            
+        </div>
+        <div class="col-xl-9">
+            <h1>All Products</h1>
+            <div class="row">
+                <% productData.forEach(function(obj){ %>
+                    <div class="col-xl-3 text-center ">
+                        <img src="/assets/uploads/<%=obj.imgpath%>" class="img-fluid"/>
+                        <h2><%=obj.price%></h2>
+                        <p>
+                            <%=obj.name%>
+                        </p>
+                        <p>
+                            <button for="<%=obj._id%>" class="btn btn-dark btn-cart">Add To Cart</button>
+                        </p>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include('common/footer')%>

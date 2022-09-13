@@ -1,0 +1,58 @@
+<%-include('common/header')%>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-6">
+            <h1>Login Page</h1>
+            <form id="login-form">
+                <ul>
+                    
+                    <li>Email</li>
+                    <li>
+                        <input type="text" name="useremail" class="form-control">
+                    </li>
+                    <li>Password</li>
+                    <li>
+                        <input type="text" name="userpassword" class="form-control">
+                    </li>
+                    
+                    <li>
+                        <input type="button" id="login-btn" value="Register">
+                    </li>
+                </ul>
+                </form>
+                <p id="err_msg_login"></p>
+        </div>
+        <div class="col-xl-6">
+            <h1>New User</h1>
+            <form id="register-form">
+            <ul>
+                <li>Name</li>
+                <li>
+                    <input type="text" name="username" class="form-control">
+                </li>
+                <li>Mobile</li>
+                <li>
+                    <input type="text" name="usermobile" class="form-control">
+                </li>
+                <li>Email</li>
+                <li>
+                    <input type="text" name="useremail" class="form-control">
+                </li>
+                <li>Password</li>
+                <li>
+                    <input type="text" name="userpassword" class="form-control">
+                </li>
+                <li>Confirm Password</li>
+                <li>
+                    <input type="text" name="usercpassword" class="form-control">
+                </li>
+                <li>
+                    <input type="button" id="register-btn" value="Register">
+                </li>
+            </ul>
+            </form>
+            <p id="err_msg"></p>
+        </div>
+    </div>
+</div>
+<%-include('common/footer')%>
